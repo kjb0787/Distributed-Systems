@@ -50,7 +50,7 @@ public class HttpClientSingleThread {
     long startTime = System.currentTimeMillis();
     System.out.println("single thread client start time: " + startTime);
     int requests = 1000;
-    int res = request("3.90.45.134", requests);
+    int res = request("3.90.207.173", requests);
     long endTime = System.currentTimeMillis();
     double endTimeSec = (endTime - startTime) / Math.pow(10, 3);
     System.out.println("whole program duration: " + (endTime - startTime) + " ms, " +
