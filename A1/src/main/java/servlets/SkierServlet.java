@@ -1,3 +1,5 @@
+package servlets;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -6,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "SkierServlet")
+@WebServlet(name = "servlets.SkierServlet")
 public class SkierServlet extends HttpServlet {
   private final int URL_ARR_LENGTH = 8;
   protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

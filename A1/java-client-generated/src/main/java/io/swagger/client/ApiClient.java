@@ -127,7 +127,7 @@ public class ApiClient {
      * Set HTTP client
      *
      * @param httpClient An instance of OkHttpClient
-     * @return Api Client
+     * @return Api client.Client
      */
     public ApiClient setHttpClient(OkHttpClient httpClient) {
         this.httpClient = httpClient;

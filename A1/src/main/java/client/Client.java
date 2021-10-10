@@ -1,3 +1,5 @@
+package client;
+
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.params.HttpMethodParams;
@@ -10,7 +12,7 @@ import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ClientPartOne {
+public class Client {
   private static int numThreads, numLifts, numSkiers, numRuns;
   private static DataLogger dataLogger;
   // TODO: IP: 54.85.211.59, CHANGES each new start;
@@ -76,7 +78,7 @@ public class ClientPartOne {
                            String phaseName,
                            double phaseMultiplier,
                            CountDownLatch topLatch) throws InterruptedException {
-    ClientPartOne createClient = new ClientPartOne();
+    Client createClient = new Client();
     CountDownLatch completed = new CountDownLatch(waitThreads);
     long startTime = System.currentTimeMillis();
     System.out.println(phaseName + " start time: " + startTime);
@@ -143,6 +145,9 @@ public class ClientPartOne {
     System.out.println("number of failed posts for the whole program: " + dataLogger.getFailedPosts());
     System.out.println("program whole throughput: " + dataLogger.getSuccessfulPosts() / (duration / 1000) + " requests per second");
 
+    /*
+    Comment code below to run client part1
+     */
     Calculator calculator = new Calculator(dataLogger.getOutputLines(), duration / 1000, dataLogger.getSuccessfulPosts());
     calculator.printStats();
     calculator.writeLog(dataLogger);

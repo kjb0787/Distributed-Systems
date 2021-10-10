@@ -1,9 +1,15 @@
+package client;
+
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import java.io.*;
 
+/**
+ * For latency test purposes
+ * @author stevecao
+ */
 public class HttpClientSingleThread {
 
   static private int request(String ipAddress, int numPosts) {
